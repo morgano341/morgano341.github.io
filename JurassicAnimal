@@ -1,0 +1,33 @@
+# Assignment 13 - Jurassic Turtle
+# Morgan Oliva
+import turtle
+
+t = turtle.Turtle()
+wn = turtle.Screen()
+wn.setworldcoordinates(-300, -300, 300, 300)
+t.pensize(.5)
+t.speed(0)
+t.color("Dark Green")
+wn.bgcolor("Light Blue")
+
+f = open("mystery.txt","x")    #open the file first and assign it to f
+
+for oneline in f:       #how do you pull out one line of the file at a time?
+    items = oneline.split()    #how do you create a list of each item in the line?
+    if items[0] == "UP":    #what would items[0] have to equal to pick the Turtle pen up?
+        t.up()
+    else:
+        if items[0] == "DOWN": #what would items[0] have to equal to put the Turtle pen down?
+            t.down()
+        else:
+            t.goto(int(items[0]), int(items[1]))  # must be the x and y coords
+t.penup()
+t.goto(220,215)
+t.pendown()
+t.color("Yellow")
+t.begin_fill()
+t.circle(40)
+t.end_fill()
+
+f.close()
+wn.exitonclick()
