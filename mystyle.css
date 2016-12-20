@@ -33,7 +33,8 @@ h3 {
         font-family: Verdana;
 }
 .thumbnails img {
-        height: 80px;
+        height: 342px;
+        width: 228px;
         border: 4px solid #555;
         padding: 1px;
         margin: 0 10px 10px 0;
